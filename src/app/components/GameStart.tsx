@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordList: any, ncourse: number }) => {
 
     const { t } = useTranslation()
- 
+
     const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Enter') {
             setFlag(3)
@@ -28,7 +28,25 @@ const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordLis
                 'em', 'rem', 'vh', 'vw', 'calc', 'var'
             ]);
 
-        } else if (ncourse == 2) {
+        } else if(ncourse == 1){
+            setWordList([
+                'function', 'variable', 'array', 'object', 'string',
+                'number', 'boolean', 'undefined', 'null', 'let',
+                'const', 'if', 'else', 'for', 'while',
+                'do...while', 'switch', 'trycatch', 'throw', 'promise',
+                'async', 'await', 'callback', 'event', 'addeventlistener',
+                'removeeventlistener', 'dom', 'getelementbyid', 'queryselector', 'createelement',
+                'appendchild', 'innerhtml', 'textcontent', 'json', 'fetch',
+                'axios', 'consolelog', 'typeof', 'instanceof', 'this',
+                'new', 'class', 'constructor', 'extends', 'super',
+                'import', 'export', 'module', 'require', 'settimeout',
+                'setinterval', 'clearinterval', 'clearinterval', 'map', 'filter',
+                'reduce', 'foreach', 'find', 'findindex', 'concat',
+                'slice', 'splice', 'math', 'date', 'regexp',
+                'set', 'get', 'delete', 'has', 'proxy',
+                'reflect', 'iterator', 'generator', 'symbol', 'templateliterals'
+            ])
+        }else if (ncourse == 2) {
             setWordList([
                 'react', 'component', 'props', 'state', 'context',
                 'hooks', 'usestate', 'useeffect', 'usecontext', 'usereducer',

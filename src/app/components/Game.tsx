@@ -1,10 +1,10 @@
 import { Progress } from "@/components/ui/progress";
-import { useEffect, useRef, useState, useTransition } from "react"
+import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from "react-i18next";
 
 
-const Game = ({ wordList, setFlag, ncourse, typedLettersCount, setTypedLettersCount, typingErrorsCount, setTypingErrorsCount, completedWordsCount, setCompletedWordsCount, isTypingSound }: { wordList: string[], setFlag: any, ncourse: number, typedLettersCount: number, setTypedLettersCount: any, typingErrorsCount: number, setTypingErrorsCount: any, completedWordsCount: number, setCompletedWordsCount: any, isTypingSound: boolean }) => {
+const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typingErrorsCount, setTypingErrorsCount, completedWordsCount, setCompletedWordsCount, isTypingSound }: { wordList: string[], setFlag: any, typedLettersCount: number, setTypedLettersCount: any, typingErrorsCount: number, setTypingErrorsCount: any, completedWordsCount: number, setCompletedWordsCount: any, isTypingSound: boolean }) => {
 
     //問題を手前のとこで設定する
     // const wordList: string[] = ['nextjs', 'vuejs', 'svelte', 'getserversideprops']

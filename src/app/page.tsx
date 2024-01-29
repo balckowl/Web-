@@ -47,7 +47,7 @@ const page = () => {
       <div className="grid grid-cols-10">
         <div className="col-start-3 col-span-6">
           {flag === 0 && <GameTop
-            flag={flag} setFlag={setFlag}
+            setFlag={setFlag}
             isTypingSound={isTypingSound}
             setIsTypingSound={setIsTypingSound}
             isBGM={isBGM}
@@ -56,8 +56,7 @@ const page = () => {
           {flag === 1 && <GameCours setFlag={setFlag} ncourse={ncourse} setNcourse={setNcourse} />}
           {flag === 2 && <GameStart setFlag={setFlag} setWordList={setWordList} ncourse={ncourse} />}
           {flag === 3 && <Game
-            wordList={wordList}
-            ncourse={ncourse} setFlag={setFlag}
+            wordList={wordList} setFlag={setFlag}
             typedLettersCount={typedLettersCount}
             setTypedLettersCount={setTypedLettersCount}
             typingErrorsCount={typingErrorsCount}

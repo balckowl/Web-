@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons"
 
-const GameTop = ({ flag, setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: { flag: number, setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
+const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: {  setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
 
     const [lang, setLang] = useState(localStorage.getItem('i18nextLng') || 'ja');
     const { t, i18n } = useTranslation();
