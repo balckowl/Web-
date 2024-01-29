@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import {
     Dialog,
@@ -6,7 +8,6 @@ import {
     DialogTitle,
     DialogTrigger,
 } from "@/components/ui/dialog"
-"use client"
 
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
