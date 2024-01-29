@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons"
+import '../../lib/i18n';
 
 const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: {  setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
 

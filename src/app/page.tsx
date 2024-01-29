@@ -7,7 +7,7 @@ import GameOver from "./components/GameOver"
 import GameStart from "./components/GameStart"
 import GameTop from "./components/GameTop"
 
-const page = () => {
+const Page = () => {
 
   const [flag, setFlag] = useState<number>(0)
   const [ncourse, setNcourse] = useState<number>(0)
@@ -80,4 +80,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

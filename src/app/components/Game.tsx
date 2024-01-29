@@ -24,17 +24,19 @@ const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typi
             setTimer(prevTimer => {
                 if (prevTimer === 1) {
                     clearInterval(timerId);
-                    setFlag(4);
+                    // タイマーが終了した後に状態を更新する
+                    setTimeout(() => setFlag(4), 0);
                     return 0;
                 } else {
                     return prevTimer - 1;
                 }
             });
         }, 1000);
-
+    
+        // クリーンアップ関数
         return () => clearInterval(timerId);
     }, []);
-
+    
     useEffect(() => {
         console.log(wordList[currentWord].split(''))
 

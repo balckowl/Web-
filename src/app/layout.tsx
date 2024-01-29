@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import SessionProvider from "@/provider/SessionProvider";
 import '../lib/i18n'
 
 
@@ -18,13 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SessionProvider>
       <html lang="ja">
         <body className={inter.className}>
           <main>{children}</main>
         </body>
       </html>
-    </SessionProvider>
-
   );
 }
