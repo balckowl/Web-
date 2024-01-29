@@ -1,0 +1,37 @@
+{
+  "Japanese": "japanese",
+  "English": "english",
+  "Settings": "Settings",
+  "Type Sound": "Type Sound",
+  "Start": "Start",
+
+  "Please select a course": "Please select a course",
+  "easy": "easy",
+  "Frontend beginner course": "Front end beginner course",
+  "nomarl": "nomarl",
+  "Frontend intermediate course": "Frontend intermediate course",
+  "hard": "hard",
+  "Frontend senior course": "Frontend senior course",
+
+  "Press Enter to start the game": "Press Enter to start the game",
+
+  "timer": "{{timer}} secounds left",
+
+  "+1 second": "+1 second",
+
+  "Estimated frontend engineer level": "Estimated frontend engineer level",
+
+  "Number of hits correctly": "Number of hits correctly",
+
+  "Number of times cleared": "Number of times cleared",
+
+  "Number of misses": "Number of misses",
+
+  "Number of times": "{{times}} times",
+
+  "Return to select course": "Return to select course",
+
+  "postResults": "Post results to <0>{{X}}</0>",
+
+  "Return to top": "Return to top"
+}

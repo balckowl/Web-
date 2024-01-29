@@ -1,0 +1,37 @@
+{
+  "Japanese": "日本語",
+  "English": "英語",
+  "Settings": "設定",
+  "Type Sound": "タイプ音",
+  "Start": "始める",
+
+  "Please select a course": "コースを選んでください",
+  "easy": "簡単",
+  "Frontend beginner course": "フロントエンド初心者コース",
+  "nomarl": "普通",
+  "Frontend intermediate course": "フロントエンド中級者コース",
+  "hard": "難しい",
+  "Frontend senior course": "フロントエンド上級者コース",
+
+  "Press Enter to start the game": "Enterを押してゲームを始める",
+
+  "timer": "残り{{timer}}秒",
+
+  "+1 second": "+1秒",
+
+  "Estimated frontend engineer level": "推定フロントエンドエンジニアレベル",
+
+  "Number of hits correctly": "正しく打った回数",
+
+  "Number of times cleared": "クリアした回数",
+
+  "Number of misses": "ミスした回数",
+
+  "Number of times": "{{times}} 回",
+
+  "Return to select course": "コースを選択に戻る",
+
+  "postResults": "結果を<0>{{X}}</0>にポスト",
+
+  "Return to top": "最初に戻る"
+}
