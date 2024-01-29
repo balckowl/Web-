@@ -20,12 +20,16 @@ import '../../lib/i18n';
 
 const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: { setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
 
-    const [lang, setLang] = useState(localStorage.getItem('i18nextLng') || 'ja');
+    const [lang, setLang] = useState<string>('');
     const { t, i18n } = useTranslation();
 
     const handleStart = () => {
         setFlag(1);
     }
+
+    useEffect(()=>{
+        setLang(localStorage.getItem('i18nextLng') || 'ja')
+    },[])
 
     useEffect(() => {
         //localstorageにデータを送る

@@ -2,7 +2,7 @@
 
 import { useTranslation } from "react-i18next";
 
-const GameCours = ({ ncourse, setNcourse, setFlag }: { ncourse: number, setNcourse: any, setFlag: any }) => {
+const GameCours = ({ setNcourse, setFlag }: { setNcourse: any, setFlag: any }) => {
 
     const { t } = useTranslation()
 

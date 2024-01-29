@@ -16,10 +16,16 @@ const Page = () => {
   const [completedWordsCount, setCompletedWordsCount] = useState<number>(0)
   const [wordList, setWordList] = useState<string[]>(['']);
   //過去の設定があるか確認し、なければtrueとする。
-  const savedTypingSound = localStorage.getItem('typingSound');
-  const [isTypingSound, setIsTypingSound] = useState<boolean>(savedTypingSound ? JSON.parse(savedTypingSound) : true)
-  const savedBGM = localStorage.getItem('isBGM');
-  const [isBGM, setIsBGM] = useState<boolean>(savedBGM ? JSON.parse(savedBGM) : false);
+  const [isTypingSound, setIsTypingSound] = useState<boolean>(true)
+  const [isBGM, setIsBGM] = useState<boolean>(false);
+
+  useEffect(()=>{
+    const savedBGM = localStorage.getItem('isBGM');
+    const savedTypingSound = localStorage.getItem('typingSound');
+
+    setIsBGM(savedBGM ? JSON.parse(savedBGM) : false)
+    setIsTypingSound(savedTypingSound ? JSON.parse(savedTypingSound) : true)
+  },[])
 
   useEffect(() => {
     if (isBGM) {
@@ -53,7 +59,7 @@ const Page = () => {
             isBGM={isBGM}
             setIsBGM={setIsBGM}
           />}
-          {flag === 1 && <GameCours setFlag={setFlag} ncourse={ncourse} setNcourse={setNcourse} />}
+          {flag === 1 && <GameCours setFlag={setFlag} setNcourse={setNcourse} />}
           {flag === 2 && <GameStart setFlag={setFlag} setWordList={setWordList} ncourse={ncourse} />}
           {flag === 3 && <Game
             wordList={wordList} setFlag={setFlag}

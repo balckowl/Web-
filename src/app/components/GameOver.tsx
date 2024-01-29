@@ -10,7 +10,7 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
 
     const { t } = useTranslation()
     const [score, setScore] = useState<number>(completedWordsCount * 10 + typingErrorsCount * -2 + typedLettersCount * 1)
-    const postMessage = `あなたの推定エンジニアレベル💪${score}Lv.`
+    // const postMessage = `あなたの推定エンジニアレベル💪${score}Lv.`
 
     const returnSelectCourse = () => {
         //初期化
