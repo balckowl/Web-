@@ -47,16 +47,16 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
                 </li>
             </ul>
             <div className="flex gap-4">
-                <Button className="bg-black text-white"><a
+                {/* <Button className="bg-black text-white"><a
                     href={`http://twitter.com/share?url=yurukei-career.com&text=${postMessage}&via=yurukei20&hashtags=ハッシュタグのテキスト`}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
-                ><Trans
-                        i18nKey="postResults"
-                        values={{ X: '' }} // ここで X の値を空文字に設定
-                        components={[<FontAwesomeIcon icon={faXTwitter} />]}
-                    /></a>
-                </Button>
+                // ><Trans
+                //         i18nKey="postResults"
+                //         values={{ X: '' }} // ここで X の値を空文字に設定
+                //         components={[<FontAwesomeIcon icon={faXTwitter} />]}
+                //     /></a>
+                </Button> */}
                 <Button className="bg-orange-300" onClick={returnTop}>{t('Return to top')}</Button>
                 <Button className="bg-purple-300" onClick={returnSelectCourse}>{t('Return to select course')}</Button>
             </div>
