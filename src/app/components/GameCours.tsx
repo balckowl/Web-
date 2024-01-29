@@ -1,3 +1,5 @@
+"use client"
+
 import { useTranslation } from "react-i18next";
 
 const GameCours = ({ ncourse, setNcourse, setFlag }: { ncourse: number, setNcourse: any, setFlag: any }) => {

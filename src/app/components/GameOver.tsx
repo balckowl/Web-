@@ -1,8 +1,10 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import { Trans, useTranslation } from "react-i18next"
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { useTranslation } from "react-i18next"
 
 const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWordsCount, setTypedLettersCount, setTypingErrorsCount, setCompletedWordsCount }: { setFlag: any, typedLettersCount: number, typingErrorsCount: number, completedWordsCount: number, setTypedLettersCount: any, setTypingErrorsCount: any, setCompletedWordsCount: any }) => {
 

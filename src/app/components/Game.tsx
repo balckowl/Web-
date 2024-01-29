@@ -1,3 +1,5 @@
+"use client"
+
 import { Progress } from "@/components/ui/progress";
 import { useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from 'framer-motion';
@@ -36,7 +38,7 @@ const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typi
         // クリーンアップ関数
         return () => clearInterval(timerId);
     }, []);
-    
+
     useEffect(() => {
         console.log(wordList[currentWord].split(''))
 
