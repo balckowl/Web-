@@ -31,7 +31,7 @@
 
   "Return to select course": "コースを選択に戻る",
 
-  "postResults": "結果を<0>{{X}}</0>にポスト",
+  "postResults": "結果を<l></l>にポスト",
 
   "Return to top": "最初に戻る"
 }

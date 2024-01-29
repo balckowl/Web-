@@ -55,8 +55,7 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
                     rel="nofollow noopener noreferrer"
                 ><Trans
                         i18nKey="postResults"
-                        values={{ X: '' }} // ここで X の値を空文字に設定
-                        components={[<FontAwesomeIcon icon={faXTwitter} />]}
+                        components={{ l: <FontAwesomeIcon icon={faXTwitter} /> }}
                     /></a>
                 </Button>
                 <Button className="bg-orange-300" onClick={returnTop}>{t('Return to top')}</Button>
