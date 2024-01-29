@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
-    DialogDescription,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -16,7 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGear } from "@fortawesome/free-solid-svg-icons"
 import '../../lib/i18n';
 
-const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: {  setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
+const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: { setFlag: any, isTypingSound: boolean, setIsTypingSound: any, isBGM: boolean, setIsBGM: any }) => {
 
     const [lang, setLang] = useState(localStorage.getItem('i18nextLng') || 'ja');
     const { t, i18n } = useTranslation();
@@ -57,37 +56,35 @@ const GameTop = ({ setFlag, isTypingSound, setIsTypingSound, isBGM, setIsBGM }: 
                     <DialogContent>
                         <DialogHeader>
                             <DialogTitle className="text-4xl mb-3">{t('Settings')}</DialogTitle>
-                            <DialogDescription >
-                                <ul className="flex flex-col gap-3 mb-5">
-                                    <li className="flex items-center justify-between">
-                                        <Label htmlFor="bgm">{t('BGM')}</Label>
-                                        <Switch
-                                            id="bgm"
-                                            checked={isBGM}
-                                            onCheckedChange={() => setIsBGM(!isBGM)}
-                                        />
-                                    </li>
-                                    <li className="flex items-center justify-between">
-                                        <Label htmlFor="airplane-mode">{t('Type Sound')}</Label>
-                                        <Switch
-                                            id="airplane-mode"
-                                            checked={isTypingSound}
-                                            onCheckedChange={() => setIsTypingSound(!isTypingSound)}
-                                        />
-                                    </li>
-                                </ul>
-                                <ul className="flex flex-col gap-3">
-                                    <li className="flex items-center justify-between">
-                                        <Checkbox id="ja" checked={lang === 'ja'} onCheckedChange={() => { setLang('ja') }} />
-                                        <Label htmlFor="ja">{t('Japanese')}</Label>
-                                    </li>
-                                    <li className="flex items-center justify-between">
-                                        <Checkbox id="en" checked={lang === 'en'} onCheckedChange={() => setLang('en')} />
-                                        <Label htmlFor="en">{t('English')}</Label>
-                                    </li>
-                                </ul>
-                            </DialogDescription>
                         </DialogHeader>
+                        <ul className="flex flex-col gap-3 mb-[10px]">
+                            <li className="flex items-center justify-between">
+                                <Label htmlFor="bgm">{t('BGM')}</Label>
+                                <Switch
+                                    id="bgm"
+                                    checked={isBGM}
+                                    onCheckedChange={() => setIsBGM(!isBGM)}
+                                />
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <Label htmlFor="airplane-mode">{t('Type Sound')}</Label>
+                                <Switch
+                                    id="airplane-mode"
+                                    checked={isTypingSound}
+                                    onCheckedChange={() => setIsTypingSound(!isTypingSound)}
+                                />
+                            </li>
+                        </ul>
+                        <ul className="flex flex-col gap-3">
+                            <li className="flex items-center justify-between">
+                                <Checkbox id="ja" checked={lang === 'ja'} onCheckedChange={() => { setLang('ja') }} />
+                                <Label htmlFor="ja">{t('Japanese')}</Label>
+                            </li>
+                            <li className="flex items-center justify-between">
+                                <Checkbox id="en" checked={lang === 'en'} onCheckedChange={() => setLang('en')} />
+                                <Label htmlFor="en">{t('English')}</Label>
+                            </li>
+                        </ul>
                     </DialogContent>
                 </Dialog>
             </ul>
