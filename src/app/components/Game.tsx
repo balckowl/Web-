@@ -144,7 +144,7 @@ const Game = ({ wordList, setFlag, logoList, typedLettersCount, setTypedLettersC
                 </span>
             </div>
             <ul className="flex items-center gap-4 border-t border-black p-3">
-                {logoList.map((logo, index) => (
+                {logoList.map((logo: any, index: any) => (
                     <li key={index} className="flex gap-2 items-center">
                         <div>
                             <img src={logo.logo} alt={logo.name} className="w-[30px] h-[30px]" />
