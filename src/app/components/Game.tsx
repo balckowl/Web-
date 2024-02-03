@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslation } from "react-i18next";
 
 
-const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typingErrorsCount, setTypingErrorsCount, completedWordsCount, setCompletedWordsCount, isTypingSound }: { wordList: string[], setFlag: any, typedLettersCount: number, setTypedLettersCount: any, typingErrorsCount: number, setTypingErrorsCount: any, completedWordsCount: number, setCompletedWordsCount: any, isTypingSound: boolean }) => {
+const Game = ({ wordList, setFlag, logoList, typedLettersCount, setTypedLettersCount, typingErrorsCount, setTypingErrorsCount, completedWordsCount, setCompletedWordsCount, isTypingSound }: { wordList: string[], setFlag: any, logoList: any, typedLettersCount: number, setTypedLettersCount: any, typingErrorsCount: number, setTypingErrorsCount: any, completedWordsCount: number, setCompletedWordsCount: any, isTypingSound: boolean }) => {
 
     //問題を手前のとこで設定する
     // const wordList: string[] = ['nextjs', 'vuejs', 'svelte', 'getserversideprops']
@@ -34,7 +34,7 @@ const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typi
                 }
             });
         }, 1000);
-    
+
         // クリーンアップ関数
         return () => clearInterval(timerId);
     }, []);
@@ -144,18 +144,12 @@ const Game = ({ wordList, setFlag, typedLettersCount, setTypedLettersCount, typi
                 </span>
             </div>
             <ul className="flex items-center gap-4 border-t border-black p-3">
-                <li className="flex gap-2 items-center">
+                {logoList.map((logo: any)=>(<li className="flex gap-2 items-center">
                     <div>
-                        <img src="/nextjs.svg" alt="" className="w-[30px] h-[30px]" />
+                        <img src={logo.logo} alt="" className="w-[30px] h-[30px]" />
                     </div>
-                    <p>Nextjs</p>
-                </li>
-                <li className="flex gap-2 items-center">
-                    <div>
-                        <img src="/react.svg" alt="" className="w-[30px] h-[30px]" />
-                    </div>
-                    <p>React</p>
-                </li>
+                    <p>{logo.name}</p>
+                </li>))}
             </ul>
         </div>
     )

@@ -1,16 +1,18 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { Trans, useTranslation } from "react-i18next"
+import { animate, useMotionValue, useTransform, motion } from "framer-motion"
 
 const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWordsCount, setTypedLettersCount, setTypingErrorsCount, setCompletedWordsCount }: { setFlag: any, typedLettersCount: number, typingErrorsCount: number, completedWordsCount: number, setTypedLettersCount: any, setTypingErrorsCount: any, setCompletedWordsCount: any }) => {
 
     const { t } = useTranslation()
     const [score, setScore] = useState<number>(completedWordsCount * 10 + typingErrorsCount * -2 + typedLettersCount * 1)
     const postMessage = `あなたの推定エンジニアレベル💪${score}Lv.`
+
 
     const returnSelectCourse = () => {
         //初期化
@@ -33,7 +35,7 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
     return (
         <div className="border border-black h-[500px] rounded flex justify-center items-center flex-col">
             <h2 className="text-[18px] mb-3">{t('Estimated frontend engineer level')}</h2>
-            <p className="text-[100px]"><span className="me-[10px]">💪</span>{score}Lv.</p>
+            <p className="text-[100px]">{score}Lv.</p>
             <ul className="flex justify-between mb-5">
                 <li className="border-e border-dotted border-black p-3">
                     <p className="text-red-500">{t('Number of hits correctly')}</p>

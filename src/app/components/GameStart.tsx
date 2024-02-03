@@ -1,9 +1,8 @@
 "use client"
-
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordList: any, ncourse: number }) => {
+const GameStart = ({ setFlag, setWordList, ncourse, setLogoList }: { setFlag: any, setWordList: any, ncourse: number, setLogoList: any }) => {
 
     const { t } = useTranslation()
 
@@ -30,7 +29,11 @@ const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordLis
                 'em', 'rem', 'vh', 'vw', 'calc', 'var'
             ]);
 
-        } else if(ncourse == 1){
+            setLogoList([
+                { logo: '/html-5.svg', name: 'html' }, { logo: 'css-3.svg', name: 'css' }
+            ]);
+
+        } else if (ncourse == 1) {
             setWordList([
                 'function', 'variable', 'array', 'object', 'string',
                 'number', 'boolean', 'undefined', 'null', 'let',
@@ -48,7 +51,12 @@ const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordLis
                 'set', 'get', 'delete', 'has', 'proxy',
                 'reflect', 'iterator', 'generator', 'symbol', 'templateliterals'
             ])
-        }else if (ncourse == 2) {
+
+            setLogoList([
+                { logo: '/javascript.svg', name: 'javasript' },
+            ]);
+
+        } else if (ncourse == 2) {
             setWordList([
                 'react', 'component', 'props', 'state', 'context',
                 'hooks', 'usestate', 'useeffect', 'usecontext', 'usereducer',
@@ -62,6 +70,10 @@ const GameStart = ({ setFlag, setWordList, ncourse }: { setFlag: any, setWordLis
                 'reactrouter', 'link', 'route', 'switch', 'reactdom',
                 'createref', 'createcontext', 'createref', 'cloneelement', 'children',
                 'memo', 'purecomponent', 'syntheticevent', 'redux', 'flux'
+            ]);
+
+            setLogoList([
+                { logo: '/react.svg', name: 'react' }, { logo: '/nextjs.svg', name: 'nextjs' },
             ]);
         }
 

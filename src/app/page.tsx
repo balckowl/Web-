@@ -15,6 +15,7 @@ const Page = () => {
   const [typingErrorsCount, setTypingErrorsCount] = useState<number>(0)
   const [completedWordsCount, setCompletedWordsCount] = useState<number>(0)
   const [wordList, setWordList] = useState<string[]>(['']);
+  const [logoList, setLogoList] = useState<string[]>(['']);
   //過去の設定があるか確認し、なければtrueとする。
   const [isTypingSound, setIsTypingSound] = useState<boolean>(true)
   const [isBGM, setIsBGM] = useState<boolean>(false);
@@ -60,9 +61,10 @@ const Page = () => {
             setIsBGM={setIsBGM}
           />}
           {flag === 1 && <GameCours setFlag={setFlag} setNcourse={setNcourse} />}
-          {flag === 2 && <GameStart setFlag={setFlag} setWordList={setWordList} ncourse={ncourse} />}
+          {flag === 2 && <GameStart setFlag={setFlag} setWordList={setWordList} setLogoList={setLogoList} ncourse={ncourse} />}
           {flag === 3 && <Game
             wordList={wordList} setFlag={setFlag}
+            logoList={logoList}
             typedLettersCount={typedLettersCount}
             setTypedLettersCount={setTypedLettersCount}
             typingErrorsCount={typingErrorsCount}
