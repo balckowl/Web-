@@ -22,10 +22,9 @@ const GameStart = ({ setFlag, setWordList, ncourse, setLogoList }: { setFlag: an
                 'ul', 'ol', 'li', 'a', 'p', 'span', 'img', 'src',
                 'alt', 'table', 'th', 'tr', 'td', 'mediaquery',
                 'animation', 'transform', 'transition', 'boxshadow',
-                'hover', 'active', 'focus', 'pseudoclass', 'pseudoelement',
-                'viewport', 'responsive', 'flex', 'justifycontent',
-                'alignitems', 'float', 'clear', 'display', 'position',
-                'zindex', 'opacity', 'lineargradient', 'rgba',
+                'hover', 'active', 'focus', 'viewport', 'responsive', 
+                'flex', 'justifycontent','alignitems', 'float', 'clear', 
+                'display', 'position','zindex', 'opacity', 'lineargradient', 'rgba',
                 'em', 'rem', 'vh', 'vw', 'calc', 'var'
             ]);
 
@@ -53,7 +52,7 @@ const GameStart = ({ setFlag, setWordList, ncourse, setLogoList }: { setFlag: an
             ])
 
             setLogoList([
-                { logo: '/javascript.svg', name: 'javasript' },
+                { logo: '/javascript.svg', name: 'javasript' },{ logo: '/typescript.svg', name: 'typescript' },
             ]);
 
         } else if (ncourse == 2) {

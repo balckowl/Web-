@@ -1,24 +1,34 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
 import { Trans, useTranslation } from "react-i18next"
 
-const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWordsCount, setTypedLettersCount, setTypingErrorsCount, setCompletedWordsCount }: { setFlag: any, typedLettersCount: number, typingErrorsCount: number, completedWordsCount: number, setTypedLettersCount: any, setTypingErrorsCount: any, setCompletedWordsCount: any }) => {
+const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWordsCount, setTypedLettersCount, setTypingErrorsCount, setCompletedWordsCount, ncourse }: { setFlag: any, typedLettersCount: number, typingErrorsCount: number, completedWordsCount: number, setTypedLettersCount: any, setTypingErrorsCount: any, setCompletedWordsCount: any, ncourse: number }) => {
 
     const { t } = useTranslation()
     const [score, setScore] = useState<number>(completedWordsCount * 10 + typingErrorsCount * -2 + typedLettersCount * 1)
+    const [courseName, setCourseName] = useState<string>('')
     const postMessage = encodeURIComponent(
+        `${courseName}\n` +
         `💪${score}Lv.💪\n` +
         `${t('Number of hits correctly')}: ${t('Number of times', { times: typedLettersCount })}\n` +
         `${t('Number of times cleared')}: ${t('Number of times', { times: completedWordsCount })}\n` + // ここを修正
-        `${t('Number of misses')}: ${t('Number of times', { times: typingErrorsCount })}\n` + // ここを修正
-        `https://webda-rho.vercel.app/ \n` +
-        `#frontendTypeMaster`
+        `${t('Number of misses')}: ${t('Number of times', { times: typingErrorsCount })}\n\n` + // ここを修正
+        `#frontendTypeMaster\n`
     );
-    
+
+    useEffect(()=>{
+        if(ncourse === 0){
+            setCourseName('初級コース')
+        }else if(ncourse === 1){
+            setCourseName('中級コース')
+        }else{
+            setCourseName('上級コース')
+        }
+    },[])
 
 
     const returnSelectCourse = () => {

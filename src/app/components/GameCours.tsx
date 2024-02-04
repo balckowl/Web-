@@ -35,7 +35,7 @@ const GameCours = ({ setNcourse, setFlag }: { setNcourse: any, setFlag: any }) =
                                 <p>{t('Frontend intermediate course')}</p>
                             </div>
                             <div>
-                                <p>HTML, CSS, JS</p>
+                                <p>JS, TS</p>
                             </div>
                         </div>
                     </li>
