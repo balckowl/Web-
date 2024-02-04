@@ -22,11 +22,11 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
 
     useEffect(()=>{
         if(ncourse === 0){
-            setCourseName('初級コース')
+            setCourseName(t('Frontend beginner course'))
         }else if(ncourse === 1){
-            setCourseName('中級コース')
+            setCourseName(t('Frontend intermediate course'))
         }else{
-            setCourseName('上級コース')
+            setCourseName(t('Frontend senior course'))
         }
     },[])
 
