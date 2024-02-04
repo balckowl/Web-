@@ -10,7 +10,15 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
 
     const { t } = useTranslation()
     const [score, setScore] = useState<number>(completedWordsCount * 10 + typingErrorsCount * -2 + typedLettersCount * 1)
-    const postMessage = `あなたの推定エンジニアレベル💪${score}Lv.`
+    const postMessage = encodeURIComponent(
+        `💪${score}Lv.💪\n` +
+        `${t('Number of hits correctly')}: ${t('Number of times', { times: typedLettersCount })}\n` +
+        `${t('Number of times cleared')}: ${t('Number of times', { times: completedWordsCount })}\n` + // ここを修正
+        `${t('Number of misses')}: ${t('Number of times', { times: typingErrorsCount })}\n` + // ここを修正
+        `https://webda-rho.vercel.app/ \n` +
+        `#frontendTypeMaster`
+    );
+    
 
 
     const returnSelectCourse = () => {
@@ -51,7 +59,7 @@ const GameOver = ({ setFlag, typedLettersCount, typingErrorsCount, completedWord
             </ul>
             <div className="flex gap-4">
                 <Button className="bg-black text-white"><a
-                    href={`http://twitter.com/share?url=yurukei-career.com&text=${postMessage}&via=yurukei20&hashtags=ハッシュタグのテキスト`}
+                    href={`https://twitter.com/share?url=https://webda-rho.vercel.app/&text=${postMessage}`}
                     target="_blank"
                     rel="nofollow noopener noreferrer"
                 ><Trans
