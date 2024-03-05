@@ -6,7 +6,7 @@
 
 [サイトはこちら](https://webda-rho.vercel.app/)
 
-##　プレイ画像　🎮
+## プレイ画像　🎮
 <img width="1512" alt="スクリーンショット 2024-03-06 5 37 27" src="https://github.com/balckowl/frontend-type-master/assets/129815120/8d55c8f3-a0da-44b4-9c5b-cae1604be12d">
 
 
